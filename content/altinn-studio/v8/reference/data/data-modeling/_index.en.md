@@ -1,7 +1,7 @@
 ---
 title: Altinn Studio Data Modeling
-linktitle: Data Modeling
-description: Data model and Altinn Studio Data Modeling tool
+linktitle: Data Modeling (Deprecated)
+description: This page has been split into separate how-to and reference documentation
 weight: 1
 toc: true
 aliases:
@@ -11,6 +11,17 @@ aliases:
   - /altinn-studio/v8/reference/data/data-models-tool/org-datamodels
   - /altinn-studio/v8/reference/data/data-models-tool/known-issues
 ---
+
+{{% notice warning %}}
+**This page has been reorganized**
+
+This content has been split into two documents following documentation best practices:
+
+- **[Working with Data Models (How-To Guide)](/en/altinn-studio/v8/guides/development/data-modeling/)** - Step-by-step instructions for using the Data Modeling tool
+- **[Data Model Files (Reference)](/en/altinn-studio/v8/reference/data/data-model-files/)** - Technical reference for data model file types and formats
+
+Please use the new pages above. This page will be removed in a future release.
+{{% /notice %}}
 
 ## Data models
 

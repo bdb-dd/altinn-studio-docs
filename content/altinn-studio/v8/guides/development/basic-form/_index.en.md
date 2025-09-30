@@ -17,8 +17,7 @@ New services are created from your service dashboard.
    - If you choose an _organization_ for which you have rights, you will also have the opportunity to publish the service to
      the organization's test environment.
 3. Enter the name of the service.
-   _The name can only contain lowercase letters, numbers, and hyphens. This name is used to identify the service and cannot be
-   changed once set. Display name can be set and changed after the service is created._
+   _{{% insert "content/altinn-studio/v8/_includes/concepts/service-name-vs-display-name.md" %}}_
 4. Click the "Create application" button.
 
 Once the service is created, you will be taken to the service overview page.
@@ -41,17 +40,10 @@ the overview page.
 {{%/expandlarge%}}
 
 {{% expandlarge id="create-datamodel" header="Creating a data model for the form" %}}
-The data model defines the data expected to be collected and the format it should be in.
-> _**One can think of a data model as a table of contents for the form.**_
-
-For a simple form, there is often a 1-1 correspondence from fields in the data model to fields in the form, while for more advanced
-forms, the data model and form may be quite different.
+{{% insert "content/altinn-studio/v8/_includes/concepts/data-model-definition.md" %}}
 
 A very simple data model with some example fields is included when creating a service. You can edit the field names
 to make it clear what they represent and add your own fields.
-
-The data model is used to determine _what_ data should be collected. It is also used to determine _how_ the data should look/be, by
-setting constraints that are validated.
 
 1. Navigate to the "Data Model" page by clicking on "Data Model" in the top menu bar.
 2. Click on a field to bring up editing options, e.g., to change the name of the field.
@@ -72,25 +64,13 @@ Forms are created in Altinn Studio by navigating to the "Build" page. On this pa
 Forms are created by dragging desired form components into each individual form page.
 
 ### Adding fields to the form
-The components that can be used in the form are divided into 3 categories:
-- **Standard**: Contains all simple form components such as text fields (long and short), dropdown list (single or multiple answers),
-  checkboxes, radio buttons, submission button, and similar.
-- **Text**: Contains text components used to inform the user. E.g., heading, paragraph, warning, information panel.
-- **Advanced**: Contains more advanced components such as group, repeating group, map, list, and similar.
+{{% insert "content/altinn-studio/v8/_includes/reference/form-component-categories.md" %}}
 
 1. Click on the page you want to edit. When creating a service, a page named "Page1" is automatically included.
 2. Select a component from the panel on the left and drag it onto the page. The component is now active in the configuration panel and
    can be configured.
-3. If the component in the form is to be used to collect data, it must be linked to the corresponding field in the data model.
-   - Open the section in the configuration column called "Data Model Bindings"
-   - Click on the available binding (e.g., "short answer") and select the desired field in the data model from the list. The list is searchable.
-   - Close the setup by clicking the X icon, or remove the binding by clicking the trash can icon.
-4. Add texts for the component by opening the "Text" section in the configuration column.
-   - Heading text is required for all components intended to collect data. Click on "Heading text" to add.
-   - Description is optional and appears below the heading text. Click on "Description" to add.
-   - Help text is optional and appears in a ? icon next to the heading text. Click on "Help text" to add.
-   - Click the X icon to close the text editing view.
-   - To edit existing texts, click on the relevant text to open the editing view.
+3. {{% insert "content/altinn-studio/v8/_includes/ui-patterns/bind-component-to-data-model.md" %}}
+4. {{% insert "content/altinn-studio/v8/_includes/ui-patterns/add-text-to-component.md" %}}
 5. Open the "Content" section in the configuration column to set up other configurations. Available configurations vary
    from component to component, but common to most are:
    - Whether the width of the component on the screen should be adjusted
@@ -118,12 +98,7 @@ the various parts of the service. The setup that comes with the service is a set
 of simple services. _However, it is still important to consider what roles an end user must have to be able to
 use the service_.
 
-The current template allows all users with the Altinn roles:
--  **Managing director (DAGL)** - this is a role one can have for a _business_.
--  **Private individual (PRIV)** - this is a role everyone has for _themselves_.
-  
-to use the service. This applies to the entire service. In addition, it allows the service owner to start up, retrieve data
-from and write data to the service, and confirm that data has been received in their own systems.
+{{% insert "content/altinn-studio/v8/_includes/reference/default-altinn-roles.md" %}}
 
 To only test a simple form in the test environment, no changes need to be made here. However, we still recommend making
 a conscious choice here before the service is eventually put into production, and possibly removing the role that is not applicable to your service.
@@ -155,21 +130,15 @@ For example, to remove the "Managing director (DAGL)" role:
 {{%/expandlarge%}}
 
 {{% expandlarge id="push-changes" header="Saving changes" %}}
-When working in the workspace of the service, you are working with a _copy_ of the service for your user. All changes you
-make are automatically saved along the way to _your file area in Altinn Studio_, but to make the changes available to others and publish them, you need to upload the changes to _the service's central file area_.
+{{% insert "content/altinn-studio/v8/_includes/concepts/local-vs-central-file-area.md" %}}
 
 This is done by clicking on "Upload your changes" to the right in the top menu bar.
 
-1. Click on "Upload your changes".
-2. Write a brief description of the changes.
-3. Click "Validate changes".
-
-The changes are now compared with what is on the central file area of the service, and then uploaded.
+{{% insert "content/altinn-studio/v8/_includes/ui-patterns/upload-changes.md" %}}
 
 <video autoplay loop controls muted src="./save-changes.mp4">Your browser does not support video playback.</video>
 
-If changes have been made directly in the files, or outside of Altinn Studio, these can be brought into _your file area_
-by clicking "Fetch changes" to the right in the menu bar. 
+{{% insert "content/altinn-studio/v8/_includes/ui-patterns/fetch-changes.md" %}} 
 
 {{% notice warning %}}
 **Note!** If changes are made both in Altinn Studio and directly in the files of the service, conflicts may occur,
@@ -181,16 +150,7 @@ you should always click "Fetch changes" before continuing to work on the service
 {{% /notice %}}
 
 ### Deleting "local" changes
-If a conflict arises, or if changes have been made that you want to discard, you can delete all changes
-that have been made in _your file area_. The service will then be reset to how it is on _the service's central file area_.
-
-1. Click on the menu button marked with 3 dots all the way to the right on the menu bar.
-2. Choose "Local changes".
-3. If you have any changes you want to keep, they can be downloaded here, either by downloading all files
-   for the entire service, or by downloading only the files that have been changed.
-4. To delete all changes in _your file area_, select "Delete local changes".
-5. In the dialog that opens, you must enter the name of the service to confirm the deletion. Enter the name and click
-   "Delete my changes" to delete, or "Cancel" to cancel.
+{{% insert "content/altinn-studio/v8/_includes/procedures/delete-local-changes.md" %}}
 
 <video autoplay loop controls muted src="./reset-local-changes.mp4">Your browser does not support video playback.</video>
 {{% /expandlarge %}}
@@ -206,15 +166,10 @@ the "Publish" button at the top right.
 
 On the publishing page, you get an overview of all available environments, as well as the status of the service in each individual environment.
 
-Publishing takes place in 2 steps:
-1. **Build version**: Here, all files and settings associated with the service are collected into a package that is given a _version_.
-2. **Publish version**: Here, you retrieve the desired _version_ from the packages you have built and publish it to the environment.
+{{% insert "content/altinn-studio/v8/_includes/concepts/build-vs-publish.md" %}}
 
 ### Building a version
-In the right column, enter the desired version name/number. Version names must start with a number or letter, and can contain:
-- numbers
-- lowercase letters
-- period `.` and hyphen `-`
+In the right column, enter the desired version name/number. {{% insert "content/altinn-studio/v8/_includes/procedures/naming-constraints-version.md" %}}
 
 You can also provide a description of the version.
 

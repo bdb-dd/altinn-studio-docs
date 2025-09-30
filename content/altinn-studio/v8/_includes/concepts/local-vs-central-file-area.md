@@ -1,0 +1,1 @@
+When working in the workspace of the service, you are working with a _copy_ of the service for your user. All changes you make are automatically saved along the way to _your file area in Altinn Studio_, but to make the changes available to others and publish them, you need to upload the changes to _the service's central file area_.

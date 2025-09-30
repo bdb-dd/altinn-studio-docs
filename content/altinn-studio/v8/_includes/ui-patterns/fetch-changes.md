@@ -1,0 +1,1 @@
+If changes have been made directly in the files, or outside of Altinn Studio, these can be brought into _your file area_ by clicking "Fetch changes" to the right in the menu bar.

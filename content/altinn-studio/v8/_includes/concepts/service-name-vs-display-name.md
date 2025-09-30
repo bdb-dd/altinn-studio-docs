@@ -1,0 +1,1 @@
+The service name can only contain lowercase letters, numbers, and hyphens. This name is used to identify the service and cannot be changed once set. Display name can be set and changed after the service is created.
