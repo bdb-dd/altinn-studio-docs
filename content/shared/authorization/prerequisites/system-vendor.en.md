@@ -1,0 +1,5 @@
+- The system vendor must contact Digdir to get access to the system register and system user scopes. Procedures for this are described on [Samarbeidsportalen](https://samarbeid.digdir.no/altinn/kom-i-gang/2868).
+- The system vendor must create a client in Maskinporten for the system, which gets a client ID that will be used for authentication and authorization.
+- Access to scope for registering a system in the system register: `altinn:authentication/systemregister.write`
+- For provider-controlled flow: access to scopes `altinn:authentication/systemuser.request.read` and `altinn:authentication/systemuser.request.write`
+- Access to scopes for the APIs that the system will use (provided by service owner)

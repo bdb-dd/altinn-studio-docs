@@ -1,0 +1,4 @@
+- The organization must have a client in Maskinporten.
+- The organization must have received the scopes `altinn:resourceregistry/resource.write` and `altinn:resourceregistry/resource.read`.
+- The organization must have received the scope `altinn:maskinporten/delegationschemes.write`.
+- The organization must have created a Maskinporten client configured with these scopes.

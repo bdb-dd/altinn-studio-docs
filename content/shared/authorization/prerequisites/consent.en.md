@@ -1,0 +1,1 @@
+You must have access to resource administration for your organization. See the [Getting Started Guide](/en/authorization/getting-started/resource-admin-studio/).

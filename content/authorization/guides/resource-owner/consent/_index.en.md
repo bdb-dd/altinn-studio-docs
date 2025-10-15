@@ -13,7 +13,7 @@ This guide explains how to set up a consent resource.
 
 ## Prerequisites
 
-You must have access to resource administration for your organization. See the [Getting Started Guide](/en/authorization/getting-started/resource-admin-studio/).
+{{% insert "content/shared/authorization/prerequisites/consent.en.md" %}}
 
 ## Create New Resource
 

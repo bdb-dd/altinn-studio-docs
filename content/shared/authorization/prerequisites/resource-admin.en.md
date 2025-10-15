@@ -1,0 +1,4 @@
+- The organization must have a client in Maskinporten
+- The organization must have been assigned the scope `altinn:resourceregistry/resource.write`
+- Access to Maskinporten as API provider
+- Agreement with Digdir for access to resource registry

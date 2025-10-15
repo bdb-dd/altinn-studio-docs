@@ -10,10 +10,7 @@ Via the Resource Registry API, it is possible to register delegable API resource
 
 ## Prerequisites
 
-- The organization must have a client in Maskinporten.
-- The organization must have received the scopes `altinn:resourceregistry/resource.write` and `altinn:resourceregistry/resource.read`.
-- The organization must have received the scope `altinn:maskinporten/delegationschemes.write`.
-- The organization must have created a Maskinporten client configured with these scopes.
+{{% insert "content/shared/authorization/prerequisites/api-scheme.en.md" %}}
 
 ## Define Resource for Delegable API Scheme
 
@@ -21,17 +18,7 @@ The delegable API schemes are defined in the Altinn Resource Registry as a resou
 
 The following attributes are necessary:
 
-| Attribute             | Description                                                                                                                                             |
-| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| identifier            | Globally unique ID for the resource. Also used in policy. Required.                                                                                     |
-| title                 | Title for the API Scheme. Displayed in the Altinn portal when delegating. Must be provided for en, nb, and nn (English, Bokmål, and Nynorsk). Required. |
-| description           | Description for the API Scheme. Must be provided for en, nb, and nn (English, Bokmål, and Nynorsk). Required.                                           |
-| rightDescription      | Delegation description for the API Scheme. Must be provided for en, nb, and nn (English, Bokmål, and Nynorsk). Required.                                |
-| resourceReferences    | A resource reference with reference type MaskinportenScope must be added.                                                                               |
-| delegable             | Must be set to true for the scope to be delegable to a provider.                                                                                        |
-| visible               | Must be set to true for the scope to be delegable to a provider.                                                                                        |
-| hasCompetentAuthority | Defines the service owner. Must be set with the organization number and correct service owner code (NAV, SKD, SVV, etc.).                               |
-| resourceType          | Must be set to MaskinportenSchema.                                                                                                                      |
+{{% insert "content/shared/authorization/tables/resource-attributes-required.en.md" %}}
 
 Below is an example from production of an API resource. ([See the same via API](https://platform.altinn.no/resourceregistry/api/v1/resource/maskinportenschema-aquaportalapi-write))
 
