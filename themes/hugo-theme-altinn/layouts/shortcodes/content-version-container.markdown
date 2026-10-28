@@ -2,4 +2,4 @@
 {{ with .Get "version-label" }}**{{ . }}**
 
 {{ end }}
-{{.Inner | .Page.RenderString }}
+{{ .InnerDeindent }}

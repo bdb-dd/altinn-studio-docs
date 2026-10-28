@@ -9,6 +9,6 @@
 <details>
 <summary>{{ $title }}</summary>
 
-{{ .Inner | .Page.RenderString }}
+{{ .InnerDeindent }}
 
 </details>

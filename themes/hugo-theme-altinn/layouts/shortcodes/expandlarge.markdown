@@ -4,6 +4,6 @@
 <details>
 <summary>{{ $header }}</summary>
 
-{{ .Inner | .Page.RenderString }}
+{{ .InnerDeindent }}
 
 </details>
